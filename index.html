@@ -8,6 +8,8 @@
 		fetch('https://carlosreneas.github.io/endpoints/noticias.json')
 		.then(response=>response.json())
 		.then(noticias=>{
+			let element = document.getElementById('elem')
+			//element.innerHTML =...
 		console.log(noticias)
 		})
 		.catch(err=>console.log(err))
