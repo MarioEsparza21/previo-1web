@@ -5,18 +5,27 @@
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 		<script>
+			var ourRequest = new XMLHttpRequest();
+			ourRequest.open('GET','http://demo6497253.mockable.io/noticias')
+			ourRequest.onload = function(){
+				var ourData = JSON.parse(ourRequest.responseText);
+				console.log(ourData[0]);
+			}
+			ourRequest.send();
 		</script>
 	</head>
-<body>
+	<body>
 		<div class="terms">
-			<img style="height:100px" src="https://images.vexels.com/media/users/3/143097/isolated/preview/5a631e30cd478440c20da8c5578dd77c-discos-con-logo-circular-by-vexels.png">
+			<img style="height:100px"
+			src="https://images.vexels.com/media/users/3/143097/isolated/preview/5a631e30cd478440c20da8c5578dd77c-discos-con-logo-circular-by-vexels.png">
 			<h1></br>Periódico 6B</h1>
 			<p style="margin-left: auto;"></br>12 de Abril de 2021</br>Cúcuta</p>
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#">Inicio</a>
-				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNav">
@@ -48,28 +57,39 @@
 					</ul>
 				</div>
 			</div>
-			<img style="border-radius: 10%;height:40%; width: 40%;"src="img/gafas.png">
+			<img style="border-radius: 10%;height:40%; width: 40%;" src="img/gafas.png">
 		</nav>
-		<div class="margen">
-			<div class="terms">
-				<div class="bloque1">
-					<img style="height:100%; width: 100%;"src="https://www.flacsi.net/wp-content/uploads/2012/01/Vista-frontal-bloque-secundaria-scaled.jpg">
+		<div class="container">
+			<div class="row">
+				<div class="bloque1 col-13 col-sm-13 col-md-8">
+					<img style="height:100%; width: 100%;"
+					src="https://www.flacsi.net/wp-content/uploads/2012/01/Vista-frontal-bloque-secundaria-scaled.jpg">
 					<ul class="list-group">
 						<li class="list-group-item">
 							<h2>Democracia estudiantil Colegio 20 de marzo 2021</h2>
-							<p>El 20 de marzo se realizó un proceso democrático para conocer los representantes de los distintos grupos, así como el personero estudiantil que serán las cabezas visibles de los estudiantes ante los distintos estamentos directivos de la institución. <a href="noticias/aritculo.html">Ver mas</a></p></li>
+							<p>El 20 de marzo se realizó un proceso democrático para conocer los representantes de los
+								distintos grupos, así como el personero estudiantil que serán las cabezas visibles de los
+								estudiantes ante los distintos estamentos directivos de la institución. <a
+								href="noticias/aritculo.html">Ver mas</a></p>
+							</li>
 							<li class="list-group-item">
 								<h2>Bosque Idol Colegio 20 de marzo 2021</h2>
-								<p>Las directivas del colegio definieron que este evento tan importante para la institución se realizará el día 10 de Octubre del presente año. Debido a la pandemia se realizará de manera virtual, con el uso de las nuevas tecnologías.<a href="#">Ver mas</a></p></li>
+								<p>Las directivas del colegio definieron que este evento tan importante para la institución se
+									realizará el día 10 de Octubre del presente año. Debido a la pandemia se realizará de manera
+									virtual, con el uso de las nuevas tecnologías.<a href="#">Ver mas</a></p>
+								</li>
 								<li class="list-group-item">
 									<h2>Alternancia Colegio 12 de marzo 2021</h2>
-									<p>El colegio realiza sus trabajos de adecuaciones para volver lo más pronto posible a la alternancia, de ser posible después de la Semana Santa.<a href="#">Ver mas</a></p></li>
+									<p>El colegio realiza sus trabajos de adecuaciones para volver lo más pronto posible a la
+										alternancia, de ser posible después de la Semana Santa.<a href="#">Ver mas</a></p>
+									</li>
 									<div class="btn-group" role="group" aria-label="Basic mixed styles example">
-										<button id="boton" type="button" style='width:100%; height:100%'class="btn btn-danger">Todas las noticias</button>
+										<button id="boton" type="button" style='width:100%; height:100%' class="btn btn-danger">Todas
+										las noticias</button>
 									</div>
 								</ul>
-				</div>
-							<div class="bloque2">
+							</div>
+							<div class="bloque2 col-13 col-sm-13 col-md-3">
 								<ul class="list-group">
 									<h2>Deportes</h2>
 									<li class="list-group-item">Aplazada eliminatoria a Qatar</li>
@@ -86,24 +106,25 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-			<div class="terms">
-				<button type="button" class="btn btn-primary btn-circle btn-xl"><i class="glyphicon glyphicon-list"></i></button>
-				<p></br>pagina colegio</p>
-				<button type="button" class="btn btn-success btn-circle btn-xl"><i class="glyphicon glyphicon-link"></i></button>
-				<p></br>correo gmail</p>
-				<button type="button" class="btn btn-danger btn-circle btn-xl" onclick="location.href='#'"><i class="glyphicon glyphicon-heart"></i></button>
-				<p></br>pagina santillana</p>
-
-				<p style="margin-left: auto;"><p>Email: periodico@colegioufps.edu.co
-					</br> Twitter: @periodicoufps
-				</br>Av 20 N 12-34 Cúcuta</p>
-			</div>
-			<footer class="footer">
-				<div class="container">
-					<p style="text-align: center;">2021 @ Colegio Gimnasio UFPS</p>
-				</div>
-			</footer>
-		</body>
-	</html>
+					<div class="terms">
+						<button type="button" class="btn btn-primary btn-circle btn-xl"><i
+						class="glyphicon glyphicon-list"></i></button>
+						<p></br>pagina colegio</p>
+						<button type="button" class="btn btn-success btn-circle btn-xl"><i
+						class="glyphicon glyphicon-link"></i></button>
+						<p></br>correo gmail</p>
+						<button type="button" class="btn btn-danger btn-circle btn-xl" onclick="location.href='#'"><i
+						class="glyphicon glyphicon-heart"></i></button>
+						<p></br>pagina santillana</p>
+						<p style="margin-left: auto;">
+							<p>Email: periodico@colegioufps.edu.co
+								</br> Twitter: @periodicoufps
+							</br>Av 20 N 12-34 Cúcuta</p>
+						</div>
+						<footer class="footer">
+							<div class="container">
+								<p style="text-align: center;">2021 @ Colegio Gimnasio UFPS</p>
+							</div>
+						</footer>
+					</body>
+				</html>
