@@ -4,16 +4,7 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/estilo.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-		<script>
-		var noticias = document.querySelector('#noticias')
-		function traer(){
-		fetch('https://carlosreneas.github.io/endpoints/noticias.json')
-		.then(res=> res.json())
-		.then(data=>{
-			console.log(data)
-		})
-		}
-		</script>
+		<script type="js/app.js"></script>
 	</head>
 	<body>
 		<div class="terms">
@@ -60,35 +51,36 @@
 			</div>
 			<img style="border-radius: 10%;height:40%; width: 40%;" src="img/gafas.png">
 		</nav>
-		<div class="container" id="contenedor">
+		<div class="container" id=contenedor>
 			<div class="row">
 				<div class="bloque1 col-13 col-sm-13 col-md-8">
-					<img style="height:100%; width: 100%;"
-					src="https://www.flacsi.net/wp-content/uploads/2012/01/Vista-frontal-bloque-secundaria-scaled.jpg">
-					<ul class="list-group">
-						<li class="list-group-item">
-							<h2>Democracia estudiantil Colegio 20 de marzo 2021</h2>
-							<p>El 20 de marzo se realizó un proceso democrático para conocer los representantes de los
-								distintos grupos, así como el personero estudiantil que serán las cabezas visibles de los
-								estudiantes ante los distintos estamentos directivos de la institución. <a
-								href="noticias/aritculo.html">Ver mas</a></p>
-							</li>
+					<div id="resultado">
+						<img style="height:100%; width: 100%;"
+						src="https://www.flacsi.net/wp-content/uploads/2012/01/Vista-frontal-bloque-secundaria-scaled.jpg">
+						<ul class="list-group">
 							<li class="list-group-item">
-								<h2>Bosque Idol Colegio 20 de marzo 2021</h2>
-								<p>Las directivas del colegio definieron que este evento tan importante para la institución se
-									realizará el día 10 de Octubre del presente año. Debido a la pandemia se realizará de manera
-									virtual, con el uso de las nuevas tecnologías.<a href="#">Ver mas</a></p>
+								<h2>Democracia estudiantil Colegio 20 de marzo 2021</h2>
+								<p>El 20 de marzo se realizó un proceso democrático para conocer los representantes de los
+									distintos grupos, así como el personero estudiantil que serán las cabezas visibles de los
+									estudiantes ante los distintos estamentos directivos de la institución. <a
+									href="noticias/aritculo.html">Ver mas</a></p>
 								</li>
 								<li class="list-group-item">
-									<h2>Alternancia Colegio 12 de marzo 2021</h2>
-									<p>El colegio realiza sus trabajos de adecuaciones para volver lo más pronto posible a la
-										alternancia, de ser posible después de la Semana Santa.<a href="#">Ver mas</a></p>
+									<h2>Bosque Idol Colegio 20 de marzo 2021</h2>
+									<p>Las directivas del colegio definieron que este evento tan importante para la institución se
+										realizará el día 10 de Octubre del presente año. Debido a la pandemia se realizará de manera
+										virtual, con el uso de las nuevas tecnologías.<a href="#">Ver mas</a></p>
 									</li>
-									<div class="btn-group" role="group" aria-label="Basic mixed styles example">
-										<button id="noticias" onclick="traer()"type="button" style='width:100%; height:100%' class="btn btn-danger">Todas
-										las noticias</button>
-									</div>
-								</ul>
+									<li class="list-group-item">
+										<h2>Alternancia Colegio 12 de marzo 2021</h2>
+										<p>El colegio realiza sus trabajos de adecuaciones para volver lo más pronto posible a la
+											alternancia, de ser posible después de la Semana Santa.<a href="#">Ver mas</a></p>
+										</li>
+										<div class="btn-group" role="group" aria-label="Basic mixed styles example">
+											<button type="button" id="jsonBtn" style='width:100%; height:100%' class="btn btn-danger">todas las noticias</button>
+										</div>
+									</ul>
+								</div>
 							</div>
 							<div class="bloque2 col-13 col-sm-13 col-md-3">
 								<ul class="list-group">
@@ -124,5 +116,6 @@
 							<p style="text-align: center;">2021 @ Colegio Gimnasio UFPS</p>
 						</div>
 					</footer>
+					<script src="js/app.js"></script>
 				</body>
 			</html>
